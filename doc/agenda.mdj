@@ -1633,6 +1633,7 @@
 											"model": {
 												"$ref": "AAAAAAGTsXE+FvitCLA="
 											},
+											"visible": false,
 											"fillColor": "#ffffd8",
 											"font": "Arial;13;0",
 											"parentStyle": true,
@@ -1650,7 +1651,7 @@
 									"left": 280,
 									"top": 305,
 									"width": 264.5126953125,
-									"height": 38
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1675,7 +1676,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 285,
-											"top": 348,
+											"top": 333,
 											"width": 254.5126953125,
 											"height": 13,
 											"text": "+addException(day: LocalDate)",
@@ -1694,7 +1695,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 285,
-											"top": 363,
+											"top": 348,
 											"width": 254.5126953125,
 											"height": 13,
 											"text": "+setTermination(t: Termination)",
@@ -1713,7 +1714,7 @@
 											"font": "Arial;13;0",
 											"parentStyle": true,
 											"left": 285,
-											"top": 378,
+											"top": 363,
 											"width": 254.5126953125,
 											"height": 13,
 											"underline": true,
@@ -1725,7 +1726,7 @@
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 280,
-									"top": 343,
+									"top": 328,
 									"width": 264.5126953125,
 									"height": 53
 								},

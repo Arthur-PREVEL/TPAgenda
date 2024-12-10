@@ -1,2 +1,8 @@
-Ecrire ici votre réponse à la question UML.
+QUESTION UML :
+
+D'un point de vue sémantique, le diagramme de la figure trois semble plus adapté car il retranscrit le fait qu'un RepetitiveEvent est un Event et qu'un FixedTerminationEvent est un RepitiveEvent particulier (à savoir avec une date) de fin à l'aide d'héritages.
+
+Par ailleurs, le diagramme de la figure deux comporte un autre avantage du point de vue sémantique, à savoir qu'il y a plus de relation de composition, qui montre bien que certaines classes ne peuvent pas exister sans d'autres. Par exemple, un Agenda ne peut pas exister s'il n'y a pas d'évènements à lui assigner ; du moins cela n'aurait pas d'intérêt.
+
+
 
