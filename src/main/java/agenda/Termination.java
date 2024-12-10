@@ -6,14 +6,22 @@ import java.time.temporal.Temporal;
 
 public class Termination {
 
+    //attributs
+    private LocalDate start;
+    private ChronoUnit frequency;
+    private LocalDate terminationInclusive;
+    private long numberOfOccurrences;
+
+
+
+
+
     public LocalDate terminationDateInclusive() {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        return terminationInclusive;
     }
 
     public long numberOfOccurrences() {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        return numberOfOccurrences;
     }
 
 
@@ -30,8 +38,28 @@ public class Termination {
      * @see ChronoUnit#between(Temporal, Temporal)
      */
     public Termination(LocalDate start, ChronoUnit frequency, LocalDate terminationInclusive) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        this.start = start;
+        this.frequency = frequency;
+        this.terminationInclusive = terminationInclusive;
+
+        switch (frequency) {
+            case DAYS:
+                this.numberOfOccurrences = ChronoUnit.DAYS.between(start, terminationInclusive) + 1;
+                break;
+
+            case WEEKS:
+                this.numberOfOccurrences = ChronoUnit.WEEKS.between(start, terminationInclusive) + 1;
+                break;
+
+            case MONTHS:
+                this.numberOfOccurrences = ChronoUnit.MONTHS.between(start, terminationInclusive) +1;
+                break;
+
+            case YEARS:
+                this.numberOfOccurrences = ChronoUnit.YEARS.between(start, terminationInclusive) + 1;
+                break;
+
+        }
     }
 
     /**
@@ -46,8 +74,32 @@ public class Termination {
      * @param numberOfOccurrences the number of occurrences of this repetitive event
      */
     public Termination(LocalDate start, ChronoUnit frequency, long numberOfOccurrences) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        this.start = start;
+        this.frequency = frequency;
+        this.numberOfOccurrences = numberOfOccurrences;
+
+
+        switch (frequency) {
+            case DAYS:
+                this.terminationInclusive = start.plusDays(numberOfOccurrences - 1);
+                break;
+
+            case WEEKS:
+                this.terminationInclusive = start.plusWeeks(numberOfOccurrences - 1);
+                break;
+
+
+            case MONTHS:
+                this.terminationInclusive = start.plusMonths(numberOfOccurrences - 1);
+                break;
+
+
+            case YEARS:
+                this.terminationInclusive = start.plusYears(numberOfOccurrences - 1);
+                break;
+
+        }
+
     }
 
 }

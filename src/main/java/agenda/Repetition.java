@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 public class Repetition {
     public ChronoUnit getFrequency() {
@@ -21,8 +22,14 @@ public class Repetition {
      */
     private final ChronoUnit myFrequency;
 
+    private Termination myTermination;
+
+    private TreeSet<LocalDate> myExceptionDates;
+
+
     public Repetition(ChronoUnit myFrequency) {
         this.myFrequency = myFrequency;
+        this.myExceptionDates = new TreeSet<>();
     }
 
     /**
@@ -30,8 +37,7 @@ public class Repetition {
      * @param date un date à laquelle l'événement ne doit pas se répéter
      */
     public void addException(LocalDate date) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        myExceptionDates.add(date);
     }
 
     /**
@@ -39,8 +45,15 @@ public class Repetition {
      * @param termination la terminaison de la répétition
      */
     public void setTermination(Termination termination) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
-
+        this.myTermination = termination;
     }
+
+    //getters
+    public TreeSet<LocalDate> getExceptionDates() {
+        return myExceptionDates;
+    }
+    public Termination getTermination() {
+        return myTermination;
+    }
+
 }
