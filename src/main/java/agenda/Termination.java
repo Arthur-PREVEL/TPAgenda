@@ -7,14 +7,8 @@ import java.time.temporal.Temporal;
 public class Termination {
 
     //attributs
-    private LocalDate start;
-    private ChronoUnit frequency;
     private LocalDate terminationInclusive;
     private long numberOfOccurrences;
-
-
-
-
 
     public LocalDate terminationDateInclusive() {
         return terminationInclusive;
@@ -38,8 +32,6 @@ public class Termination {
      * @see ChronoUnit#between(Temporal, Temporal)
      */
     public Termination(LocalDate start, ChronoUnit frequency, LocalDate terminationInclusive) {
-        this.start = start;
-        this.frequency = frequency;
         this.terminationInclusive = terminationInclusive;
 
         switch (frequency) {
@@ -74,8 +66,7 @@ public class Termination {
      * @param numberOfOccurrences the number of occurrences of this repetitive event
      */
     public Termination(LocalDate start, ChronoUnit frequency, long numberOfOccurrences) {
-        this.start = start;
-        this.frequency = frequency;
+
         this.numberOfOccurrences = numberOfOccurrences;
 
 
